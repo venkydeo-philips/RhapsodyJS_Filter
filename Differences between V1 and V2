@@ -15,3 +15,6 @@ https://www.graalvm.org/22.1/reference-manual/js/NashornMigrationGuide/
 The shared JavaScript library functionality uses the Mozilla Rhino JavaScript engine for testing functions. Therefore, testing a shared function in this manner may not actually reflect how the JavaScript (v.2) filter executes that function, particularly if the function uses functionality that is not supported by the GraalVM JavaScript engine. In such cases, rewrite the affected function to cater for the JavaScript (v.2) filter and use the JavaScript (v.2) filter's filter testing functionality to test it instead.
 
 A configuration property in the rhapsody.properties file is used to expose additional Java classes to the JavaScript (v.2) filter. Refer to Exposing Java Classes for details.
+
+The obselete and deprecated functions list:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
