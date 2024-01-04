@@ -1,0 +1,78 @@
+In JS V2 filter Xpath is replaced completely by E4X XML objects
+
+The following link is reference for E4X XML object:
+https://www.xml.com/pub/a/2007/11/28/introducing-e4x.html
+
+Take the following XML for example, this is the input for the JS filter:
+
+<phoneBook>    
+
+   <phoneEntry>         
+
+      <name>Joe Schwartz</name>         
+
+      <phoneNumber>342-2351</phoneNumber>    
+
+   </phoneEntry>    
+
+</phoneBook>
+
+To access the name and phoneNumber using E4X XML objects:
+
+var phoneBook = new XML(next.text);
+var name=phoneBook.phoneEntry.name;
+var phoneNumber=phoneBook.phoneEntry.phoneNumber;
+
+For XML with arrays:
+
+<phoneBook>    
+
+    <phoneEntry>         
+
+        <name>Joe Schwartz</name>         
+
+        <phoneNumber>342-2351</phoneNumber>    
+
+    </phoneEntry>    
+
+    <phoneEntry>         
+
+        <name>Aleria Delamare</name>         
+
+        <phoneNumber>342-7721</phoneNumber>    
+
+    </phoneEntry>    
+
+    <phoneEntry>         
+
+        <name>Susan Sto Helit</name>         
+
+        <phoneNumber>315-2987</phoneNumber>    
+
+    </phoneEntry>    
+
+    <phoneEntry>         
+
+        <name>Kyle Martin</name>
+
+         <phoneNumber>342-7219</phoneNumber>    
+
+    </phoneEntry> 
+
+</phoneBook>
+
+
+You can also reference each element of an XML List individually using zero-based array notation:
+
+var phoneEntry0=phoneBook.phoneEntry[0];
+
+This similarity between E4X objects, arrays, and traditional Object objects can also be seen in the use of hashed names; you can reference both XML() and XMLList() objects using ["name"] where name is the name of the element being requested. Thus, the previous statement could also be written as:
+
+var entry0 = phoneBook["phoneEntry"][0];
+
+var name0=entry0.name;
+
+name0 will be equal to => "Joe Schwartz"
+
+
+
