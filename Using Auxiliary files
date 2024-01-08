@@ -37,3 +37,15 @@ The following classes and packages are exposed by default to the JavaScript (v.2
 java.lang.Math, java.text.SimpleDateFormat, java.util.Calendar, java.util.Date, java.util.Locale, java.util.TimeZone, java.util.concurrent.TimeUnit, org.joda.time.DateTime.
 Additionally, classes in the following packages are also exposed:
 java.time, java.time.temporal, java.time.format
+
+
+To access a Java class, GraalVM JavaScript supports the Java.type(typeName) function. 
+GraalVM JavaScript provides Packages, java, and similar global properties for compatibility. 
+However, explicitly accessing the required class with Java.type is preferred.
+
+Java.type(typename) instead of java.a.b.c.typename
+
+Java.extend used to extend a class and implement an interface
+var Ext = Java.extend(Java.type("some.AbstractClass"),
+                                      Java.type("some.Interface1"),
+                                      Java.type("some.Interface2"));
