@@ -28,3 +28,12 @@ Import the class as Java.type
 var javaImp=Java.type("com.philips.ibe.SamlAssertion.AssertionBuilder");
 Call the mehtod with the instance of the class
 var assertion=javaImp.doSAMLAssertion();
+
+
+
+JavaScript (v.2) filter, by default, only has access to a select number of Java classes. 
+
+The following classes and packages are exposed by default to the JavaScript (v.2) filter:
+java.lang.Math, java.text.SimpleDateFormat, java.util.Calendar, java.util.Date, java.util.Locale, java.util.TimeZone, java.util.concurrent.TimeUnit, org.joda.time.DateTime.
+Additionally, classes in the following packages are also exposed:
+java.time, java.time.temporal, java.time.format
