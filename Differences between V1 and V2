@@ -23,5 +23,5 @@ In such cases, rewrite the affected function to cater for the JavaScript (v.2) f
 A configuration property in the rhapsody.properties file is used to expose additional Java classes to the JavaScript (v.2) filter. 
 https://docs.rhapsody.health/rhapsody/rie/73/en/javascript--v-2-.html#exposing-java-classes
 
-The obselete and deprecated functions list:
+The obsolete and deprecated functions list:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
