@@ -1,1 +1,10 @@
+In JavaScript V1
+If we want to use an external JAR we need to add it to auxiliary files in JS filter and use it as follows:
 
+var assertion = Packages.com.philips.ibe.SamlAssertion.AssertionBuilder.doSAMLAssertion();
+
+Where
+
+com.philips.ibe.SamlAssertion is the package
+AssertionBuilder is the class
+doSAMLAssertion is the method to be called
