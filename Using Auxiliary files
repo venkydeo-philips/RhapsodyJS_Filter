@@ -8,3 +8,23 @@ Where
 com.philips.ibe.SamlAssertion is the package
 AssertionBuilder is the class
 doSAMLAssertion is the method to be called
+
+
+To use the same in JavaScript V2:
+
+Add the Class to rhapsody.properties
+
+# Additional Java classes which are accessible from the JavaScript (v.2) filter. This property is dynamic. Changes to this property will be
+# picked up without a restart of the Rhapsody Engine
+dynamic.JavaScriptService.JavaAccess=com.philips.ibe.SamlAssertion.AssertionBuilder
+
+Restart the service
+
+Add the JAR to auxiliary file in the filter
+
+Call the same method in the following way:
+
+Import the class as Java.type
+var javaImp=Java.type("com.philips.ibe.SamlAssertion.AssertionBuilder");
+Call the mehtod with the instance of the class
+var assertion=javaImp.doSAMLAssertion();
