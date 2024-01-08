@@ -1,5 +1,3 @@
-In JS V2 filter Xpath is replaced completely by E4X XML objects
-
 The following link is reference for E4X XML object:
 https://www.xml.com/pub/a/2007/11/28/introducing-e4x.html
 
@@ -75,4 +73,33 @@ var name0=entry0.name;
 name0 will be equal to => "Joe Schwartz"
 
 
+For JavaScipt V2:
 
+Java DOM Based API functions can be used as below to access/ parse the XML:
+
+var xml=new XML(next.text)
+
+var name=xml.currentNode.getElementsByTagName('name').item(0).getTextContent()
+
+next.text=name
+
+this will give the name from the XML
+
+For XML Array
+
+var xml=new XML(next.text)
+names=''
+for(itr=0;itr<xml.currentNode.getElementsByTagName('name').getLength();itr++)
+{
+	var name=xml.currentNode.getElementsByTagName('name').item(itr).getTextContent()
+	names=names+name+'\n'
+	
+}
+next.text=names
+
+Will print out all the names
+
+Joe Schwartz
+Aleria Delamare
+Susan Sto Helit
+Kyle Martin
