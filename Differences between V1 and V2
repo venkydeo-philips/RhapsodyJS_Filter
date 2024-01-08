@@ -9,7 +9,7 @@ Refer https://docs.rhapsody.health/rhapsody/rie/73/en/working-with-xml-messages.
 To extend a Java class or implement a Java interface, call the class or interface with Java.extend() in the JavaScript (v.2) filter. 
 https://docs.rhapsody.health/rhapsody/rie/73/en/extending-a-java-class-or-implementing-a-java-interface.html
 
-The JavaScript (v.2) filter does not support the Nashorn JavaImporter object (for Nashorn compatibility, refer to Migration Guide from Nashorn to GraalVM JavaScript).
+The JavaScript (v.2) filter does not support the Nashorn JavaImporter object (for Nashorn compatibility: https://www.graalvm.org/22.1/reference-manual/js/NashornMigrationGuide/).
 Java.extend(Java.type("java.util.Enumeration"));
 
 The GraalVM JavaScript engine is generally less tolerant of improper usage of JavaScript syntax than the Rhino JavaScript engine. 
