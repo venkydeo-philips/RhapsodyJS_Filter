@@ -1,22 +1,27 @@
 Differences between JS V1 and V2 filter
 
-The JavaScript (v.2) filter supports the ES2022 JavaScript standard whereas the JavaScript (v.1) filter supports the older standard ES3. For JavaScript features available in the JavaScript (v.1) filter that are now obsolete or deprecated in the JavaScript (v.2) filter 
+The JavaScript (v.2) filter supports the ES2022 JavaScript standard whereas the JavaScript (v.1) filter supports the older standard ES3. 
+For JavaScript features available in the JavaScript (v.1) filter that are now obsolete or deprecated in the JavaScript (v.2) filter 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
-The JavaScript (v.1) filter supports EX4-based XML navigation, whereas the JavaScript (v.2) filter supports DOM-based XML navigation using XPath. Refer to Working with XML Messages for details on how to configure the JavaScript (v.2) filter for processing XML messages.
-To extend a Java class or implement a Java interface, call the class or interface with Java.extend() in the JavaScript (v.2) filter. Refer to Extending a Java Class or Implementing a Java Interface for details.
+The JavaScript (v.1) filter supports EX4-based XML navigation, whereas the JavaScript (v.2) filter supports DOM-based XML navigation using XPath. 
+Refer https://docs.rhapsody.health/rhapsody/rie/73/en/working-with-xml-messages.html for details on how to configure the JavaScript (v.2) filter for processing XML messages.
+To extend a Java class or implement a Java interface, call the class or interface with Java.extend() in the JavaScript (v.2) filter. 
+https://docs.rhapsody.health/rhapsody/rie/73/en/extending-a-java-class-or-implementing-a-java-interface.html
 
 The JavaScript (v.2) filter does not support the Nashorn JavaImporter object (for Nashorn compatibility, refer to Migration Guide from Nashorn to GraalVM JavaScript).
 Java.extend(Java.type("java.util.Enumeration"));
 
-The GraalVM JavaScript engine is generally less tolerant of improper usage of JavaScript syntax than the Rhino JavaScript engine. For example, the Mozilla Rhino JavaScript engine permits the use of the new keyword to instantiate a static method when configuring the JavaScript (v.2) filter, whereas the GraalVM JavaScript engine rightly throws an error.
+The GraalVM JavaScript engine is generally less tolerant of improper usage of JavaScript syntax than the Rhino JavaScript engine. 
+For example, the Mozilla Rhino JavaScript engine permits the use of the new keyword to instantiate a static method when configuring the JavaScript (v.2) filter, whereas the GraalVM JavaScript engine rightly throws an error.
 https://www.graalvm.org/22.1/reference-manual/js/NashornMigrationGuide/
 
 The shared JavaScript library functionality uses the Mozilla Rhino JavaScript engine for testing functions. 
 Therefore, testing a shared function in this manner may not actually reflect how the JavaScript (v.2) filter executes that function, particularly if the function uses functionality that is not supported by the GraalVM JavaScript engine. 
 In such cases, rewrite the affected function to cater for the JavaScript (v.2) filter and use the JavaScript (v.2) filter's filter testing functionality to test it instead.
 
-A configuration property in the rhapsody.properties file is used to expose additional Java classes to the JavaScript (v.2) filter. Refer to Exposing Java Classes for details.
+A configuration property in the rhapsody.properties file is used to expose additional Java classes to the JavaScript (v.2) filter. 
+https://docs.rhapsody.health/rhapsody/rie/73/en/javascript--v-2-.html#exposing-java-classes
 
 The obselete and deprecated functions list:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
